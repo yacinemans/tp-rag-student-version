@@ -62,6 +62,11 @@ Nous pourrions utiliser GPT3.5 ou GPT4 mais pour des raisons de coût (il faut u
 
 ```
 %xterm
+```
+
+Puis, **dans le terminal**, exécuter
+
+```
 curl https://ollama.ai/install.sh | sh
 ollama serve &
 ollama run qwen2.5:14b
@@ -91,5 +96,7 @@ https://python.langchain.com/docs/integrations/chat/ollama/
 - Tester avec l'article de votre choix.
 
 ## Etape 3 - IHM
+
+**Exercice 7 :IHM**
 
 - A l'aide de [gradio](https://www.gradio.app/guides/quickstart), mettre en place une IHM permettant d'interroger le chatbot.
