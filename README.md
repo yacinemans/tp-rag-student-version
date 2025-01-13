@@ -12,6 +12,21 @@ En sortie de ce module, vous serez capables de :
 - Réaliser le TP sous la forme d'un notebook exécutable sous Google Colab
 - Inclure les dépendances nécessaires : fichier `requirements.txt` ou installation des dépendances directement dans le notebook
 - La qualité de votre code sera prise en compte dans la notation
+- Faire en sorte que les données soient directement accessibles par le notebook sur google colab. Pour ce faire, vous pouvez cloner votre dépôt contenant les données grâce aux lignes ci-dessous
+
+```
+import os
+
+# Vérifie si le code est exécuté sur Google Colab
+if 'COLAB_GPU' in os.environ:
+    # Commandes à exécuter uniquement sur Google Colab
+    !git clone https://github.com/GITHUB_ACCOUNT/tp-rag-student-version.git
+    %cd tp-rag
+    !pip install -r requirements.txt
+else:
+    # Commandes à exécuter si ce n'est pas sur Google Colab
+    print("Pas sur Google Colab, ces commandes ne seront pas exécutées.")
+```
 
 ## Etape 1. - Indexation des documents
 
